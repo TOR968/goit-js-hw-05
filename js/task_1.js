@@ -1,5 +1,5 @@
 // Write code under this line
-const Account = function ({ login, email } = {}) {
+const Account = function (login, email) {
   this.login = login;
   this.email = email;
 };
