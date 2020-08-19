@@ -4,15 +4,15 @@ class Storage {
     this.items = items;
   }
   getItems = function () {
-    return goods;
+    return this.items;
   };
-  addItem = function (items) {
-    return goods.push(items);
+  addItem = function (item) {
+    return this.items.push(item);
   };
-  removeItem = function (items) {
-    const index = goods.indexOf(items);
+  removeItem = function (item) {
+    const index = this.items.indexOf(item);
     if (index > -1) {
-      return goods.splice(index, 1);
+      return this.items.splice(index, 1);
     }
   };
 }
