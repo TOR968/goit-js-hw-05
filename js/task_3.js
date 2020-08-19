@@ -1,19 +1,21 @@
 // Write code under this line
 class Storage {
-  constructor(goods) {
-    this.goods = goods;
+  constructor(items) {
+    this.items = items;
   }
+  getItems = function () {
+    return goods;
+  };
+  addItem = function (items) {
+    return goods.push(items);
+  };
+  removeItem = function (items) {
+    const index = goods.indexOf(items);
+    if (index > -1) {
+      return goods.splice(index, 1);
+    }
+  };
 }
-Storage.prototype.getItems = function () {
-  return goods;
-};
-Storage.prototype.addItem = function (item) {
-  return goods.push(item);
-};
-Storage.prototype.removeItem = function (item) {
-  //  delete goods.indexOf(item);
-  return goods;
-};
 
 console.log(typeof Storage);
 
