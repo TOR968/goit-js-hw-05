@@ -1,25 +1,19 @@
 // Write code under this line
-const addIndex = (element, index) => element + index;
-// Write code under this line
-const subIndex = (element, index) => element - index;
+const Account = function ({ login, email } = {}) {
+  this.login = login;
+  this.email = email;
+};
+Account.prototype.getInfo = function () {
+  return `login : ${this.login}, email: ${this.email}`;
+};
 
-function mapArray(array, cb) {
-  'use strict';
-  // Write code under this line
+console.log(typeof Account.prototype.getInfo);
+// 'function'
 
-  const numbers = new Array(array.length);
-  for (let i = 0; i < array.length; i += 1) {
-    const element = array[i];
-    const index = i;
-    numbers[i] = cb(element, index);
-  }
-  return numbers;
-}
+const mango = new Account('Mangozedog', 'mango@dog.woof');
+console.log(mango.getInfo());
+// 'login : Mangozedog, email: mango@dog.woof'
 
-const arr = [1, 2, 3, 4, 5];
-
-console.log(mapArray(arr, addIndex));
-// [1, 3, 5, 7, 9]
-
-console.log(mapArray(arr, subIndex));
-// [1, 1, 1, 1, 1]
+const poly = new Account('Poly', 'poly@mail.com');
+console.log(poly.getInfo());
+// 'login : Poly, email: poly@mail.com'
