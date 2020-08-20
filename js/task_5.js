@@ -1,7 +1,7 @@
 class Car {
   // Write code under this line
 
-  getSpecs(car) {
+  static getSpecs(car) {
     return `maxSpeed: ${this.maxSpeed}, speed: ${this.speed}, isOn: ${this.isOn}, distance: ${this.distance}, price: ${this.price}`;
   }
   constructor(maxSpeed, speed = 0, isOn = Boolean, distance = 0, price) {
@@ -45,16 +45,16 @@ mustang.turnOn();
 mustang.accelerate(50);
 mustang.drive(2);
 
-// console.log(Car.getSpecs(mustang));
+console.log(Car.getSpecs(mustang));
 // ('maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000');
 
 mustang.decelerate(20);
 mustang.drive(1);
 mustang.turnOff();
 
-// console.log(Car.getSpecs(mustang));
+console.log(Car.getSpecs(mustang));
 // 'maxSpeed: 200, speed: 0, isOn: false, distance: 130, price: 2000'
 
-// console.log(mustang.price); // 2000
+console.log(mustang.price); // 2000
 mustang.price = 4000;
 console.log(mustang.price); // 4000
