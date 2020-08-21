@@ -21,7 +21,8 @@ class Car {
     this.isOn = true;
   }
   turnOff() {
-    (this.isOn = false) || (this.speed = 0);
+    this.isOn = false;
+    this.speed = 0;
   }
   accelerate(value) {
     if (this.speed <= this.maxSpeed) {
@@ -29,9 +30,10 @@ class Car {
     }
   }
   decelerate(value) {
-    if ((this.speed += value > 0)) {
-      this.speed = 0;
-    } else if (this.speed > 0) {
+    // if ((this.speed += value > 0)) {
+    // this.speed = 0;
+    // } else
+    if (this.speed > 0) {
       this.speed -= value;
     }
   }
